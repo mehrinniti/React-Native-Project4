@@ -1,58 +1,68 @@
-
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { TouchableOpacity } from 'react-native-web';
-import InputFields from './src/login/InputFields';
-import LoginBtn from './src/login/LoginBtn';
-import SocialBtn from './src/login/SocialBtn';
+import React, { useState } from 'react'
+import { View, StyleSheet, TouchableOpacity } from 'react-native'
+import Button from './src/inputValidations/Button'
+import TextInput from './src/inputValidations/TextInput'
+import { emailValidator } from './src/inputValidations/emailValidator'
+import { passwordValidator } from './src/inputValidations/passwordValidator'
+import { nameValidator } from './src/inputValidations/nameValidator'
 
 export default function App() {
+  const [name, setName] = useState({ value: '', error: '' })
+  const [email, setEmail] = useState({ value: '', error: '' })
+  const [password, setPassword] = useState({ value: '', error: '' })
+
+  const onSignUpPressed = () => {
+    const nameError = nameValidator(name.value)
+    const emailError = emailValidator(email.value)
+    const passwordError = passwordValidator(password.value)
+    if (emailError || passwordError || nameError) {
+      setName({ ...name, error: nameError })
+      setEmail({ ...email, error: emailError })
+      setPassword({ ...password, error: passwordError })
+      return
+    }
+  }
+
   return (
-    <View style={styles.container}>
-      <h1 style={{
-        color: '#fff',
-        fontFamily: "Segoe UI",
-        letterSpacing: 2,
-        fontSize: 45,
-        fontWeight: 400,
-        marginBottom: 70
-      }}>LOGIN</h1>
-      <View>
-        <InputFields></InputFields>
-        <LoginBtn></LoginBtn>
-        <Text style={{
-          color: '#fff',
-          fontSize: 17,
-          marginTop: 40,
-          textAlign: 'center'
-        }}>
-          Don't have an account ?
-          <TouchableOpacity style={{
-            color: 'rgb(33, 150, 243)'
-          }}>
-            Sign up Now !
-          </TouchableOpacity>
-        </Text>
-        <Text style={{
-          color: '#fff',
-          fontSize: 17,
-          marginTop: 20,
-          marginBottom: 25,
-          textAlign: 'center'
-        }}>
-          ___________________ OR ___________________
-        </Text>
-        <Text style={{
-          color: '#fff',
-          fontSize: 17,
-          // marginTop: 40,
-          textAlign: 'center'
-        }}>Sign in with Social Networks</Text>
-        <SocialBtn></SocialBtn>
-      </View>
-      <StatusBar style="auto" />
+    <View>
+      <TextInput
+        label="Name"
+        returnKeyType="next"
+        value={name.value}
+        onChangeText={(text) => setName({ value: text, error: '' })}
+        error={!!name.error}
+        errorText={name.error}
+      />
+      <TextInput
+        label="Email"
+        returnKeyType="next"
+        value={email.value}
+        onChangeText={(text) => setEmail({ value: text, error: '' })}
+        error={!!email.error}
+        errorText={email.error}
+        autoCapitalize="none"
+        autoCompleteType="email"
+        textContentType="emailAddress"
+        keyboardType="email-address"
+      />
+      <TextInput
+        label="Password"
+        returnKeyType="done"
+        value={password.value}
+        onChangeText={(text) => setPassword({ value: text, error: '' })}
+        error={!!password.error}
+        errorText={password.error}
+        secureTextEntry
+      />
+      <Button
+        mode="contained"
+        onPress={onSignUpPressed}
+        style={{ marginTop: 24 }}
+      >
+        Sign Up
+      </Button>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({

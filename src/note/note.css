@@ -1,7 +1,7 @@
 .note {
     background-image: linear-gradient();
     background: linear-gradient('royalblue', 'blueviolet');
-    color: rgb(85, 85, 184);
+    color: rgb(124, 124, 234);
     /* color: rgb(79, 79, 155); */
     color: rgb(70, 31, 90);
     color: lightgray;
@@ -15,6 +15,10 @@
     font-family: serif;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(33, 150, 243);
+    color: #4d76ce;
+    color: rgb(230, 63, 63);
+    color: royalblue;
+    color: blueviolet;
 
 
 }

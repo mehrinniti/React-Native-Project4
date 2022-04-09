@@ -365,15 +365,16 @@
 //             <View>
 //               <Text style={{ fontWeight: 500, fontSize: 19, lineHeight: 30 }}> <span><Icon name="user" size={19} color="#888" /></span> <span style={{ color: '#888' }}> Name : </span>Sayma Sultana</Text>
 //               <Text style={{ fontWeight: 500, fontSize: 19, lineHeight: 30 }}> <span><Icon name="user-plus" size={19} color="#888" /></span> <span style={{ color: '#888' }}>Age : </span>22</Text>
-//               <Text style={{ fontWeight: 500, fontSize: 19, lineHeight: 30 }}> <span><Icon name="flag" size={19} color="#888" /></span> <span style={{ color: '#888' }}> Nationality : </span>Bangladeshi</Text>
-//               <Text style={{ fontWeight: 500, fontSize: 19, lineHeight: 30 }}> <span><Icon name="university" size={19} color="#888" /></span> <span style={{ color: '#888' }}> University : </span>Sonargaon University</Text>
+//               <Text style={{ fontWeight: 500, fontSize: 19, lineHeight: 30 }}> <span><Icon name="flag" size={19} color="#888" /></span> <span style={{ color: '#888' }}> Nationality : </span>Bangladeshi</Text><Text style={{ fontWeight: 500, fontSize: 19, lineHeight: 30 }}> <span><Icon name="phone-alt" size={19} color="#888" /></span> <span style={{ color: '#888' }}> Phone : </span>+880 1944449999</Text>
+
 
 //             </View>
 //             <View>
-//               <Text style={{ fontWeight: 500, fontSize: 19, lineHeight: 30 }}> <span><Icon name="phone-alt" size={19} color="#888" /></span> <span style={{ color: '#888' }}> Phone : </span>+880 1944449999</Text>
+//               <Text style={{ fontWeight: 500, fontSize: 19, lineHeight: 30 }}> <span><Icon name="university" size={19} color="#888" /></span> <span style={{ color: '#888' }}> University : </span>Sonargaon University</Text>
+//               <Text style={{ fontWeight: 500, fontSize: 19, lineHeight: 30 }}> <span><Icon name="laptop-code" size={19} color="#888" /></span> <span style={{ color: '#888' }}> Department : </span>CSE</Text>
 //               <Text style={{ fontWeight: 500, fontSize: 19, lineHeight: 30 }}> <span><Icon name="map-marker-alt" size={19} color="#888" /></span> <span style={{ color: '#888' }}> Address : </span>Narayanganj</Text>
 //               <Text style={{ fontWeight: 500, fontSize: 19, lineHeight: 30 }}> <span><Icon name="mail-bulk" size={19} color="#888" /></span> <span style={{ color: '#888' }}>Email : </span>sayma@gmail.com</Text>
-//               <Text style={{ fontWeight: 500, fontSize: 19, lineHeight: 30 }}> <span><Icon name="linkedin" size={19} color="#888" /></span> <span style={{ color: '#888' }}> Linkedin : </span>/saymasultana</Text>
+//               {/* <Text style={{ fontWeight: 500, fontSize: 19, lineHeight: 30 }}> <span><Icon name="linkedin" size={19} color="#888" /></span> <span style={{ color: '#888' }}> Linkedin : </span>/saymasultana</Text> */}
 //             </View>
 //           </View>
 
@@ -425,4 +426,3 @@
 // });
 
 // export default App;
-
